@@ -23,11 +23,10 @@ export const MetricCard = ({
   }
 }: MetricCardProps) => (
   <Card p="xs" radius="md" style={{ backgroundColor: '#1e1e1e' }}>
-    <Group position="apart">
+    <Group>
       <Text size="sm">{title}</Text>
       <Text
         size="lg"
-        weight={700}
         c={trend === 'up' ? color.up : trend === 'down' ? color.down : color.neutral}
       >
         {typeof value === 'number' ? value.toLocaleString() : value}
